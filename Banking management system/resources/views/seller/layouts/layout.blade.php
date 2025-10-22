@@ -40,18 +40,18 @@
 					</li>
 
 					<li class="sidebar-header">
-						User Management
+						Account Management
 					</li>
 
-					<li class="sidebar-item {{request()->routeIs('vendor.usermanagement.add_user')?'active':''}}">
-						<a class="sidebar-link" href="{{route('vendor.usermanagement.add_user')}}">
-              <i class="align-middle" data-feather="plus"></i> <span class="align-middle">Add New User</span>
+					<li class="sidebar-item {{request()->routeIs('accounts.create')?'active':''}}">
+						<a class="sidebar-link" href="{{route('accounts.create')}}">
+              <i class="align-middle" data-feather="plus"></i> <span class="align-middle">Create Account</span>
             </a>
 					</li>
 
-					<li class="sidebar-item {{request()->routeIs('vendor.usermanagement.view_all_user')?'active':''}}">
-						<a class="sidebar-link" href="{{route('vendor.usermanagement.view_all_user')}}">
-              <i class="align-middle" data-feather="plus"></i> <span class="align-middle">View All Users</span>
+					<li class="sidebar-item {{request()->routeIs('accounts.index')?'active':''}}">
+						<a class="sidebar-link" href="{{route('accounts.index')}}">
+              <i class="align-middle" data-feather="plus"></i> <span class="align-middle">View All Accounts</span>
             </a>
 					</li>
 

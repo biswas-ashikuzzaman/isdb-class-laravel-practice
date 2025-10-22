@@ -2,6 +2,7 @@
 // Admin routes link //
 
 // seller routes link//
+use App\Http\Controllers\AccountController;
 use App\Http\Controllers\Seller\SellerMainController;
 use App\Http\Controllers\Seller\SellerProductController;
 use App\Http\Controllers\Seller\SellerStoreController;
@@ -24,9 +25,7 @@ Route::middleware(['auth', 'verified','rolemanager:vendor'])->group(function () 
     Route::prefix('vendor')->group(function(){
         Route::controller(SellerMainController::class)->group(function(){
         Route::get('/dashboard','index')->name('vendor');
-        Route::get('/add_user','add_user')->name('vendor.usermanagement.add_user');
-        Route::get('/view_all_user','view_all_user')->name('vendor.usermanagement.view_all_user');
-        Route::get('/user_account_status','user_account_status')->name('vendor.usermanagement.user_account_status');
+        Route::resources('accounts', AccountController::class);
         });
 
     });
