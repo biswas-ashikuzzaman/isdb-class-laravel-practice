@@ -19,7 +19,7 @@
 
     {{-- Bootstrap-এর একটি কন্টেইনারের মধ্যে সবকিছু রাখা হলো --}}
     <div class="container"> 
-        <h1 class="my-4 text-primary">Global Articles View (Has Many Through)</h1>
+        <h1 class="my-4 text-primary">Total Order View (Has Many Through)</h1>
         <p class="mb-4 text-muted">Displays all articles grouped by their associated country using the HasManyThrough relationship (Country → Author → Article).</p>
 
         @if ($countries->isEmpty())
@@ -37,10 +37,10 @@
             <table class="table table-striped table-bordered table-hover">
                 <thead class="table-dark">
                     <tr>
-                        <th>Country ID</th>
-                        <th>Country Name</th>
-                        <th class="text-center">Total Articles</th>
-                        <th>Articles List (Title & ID)</th>
+                        <th>Category ID</th>
+                        <th>Categories Name</th>
+                        <th class="text-center">Total Product</th>
+                        <th>Order List (Title & ID)</th>
                     </tr>
                 </thead>
                 <tbody>
